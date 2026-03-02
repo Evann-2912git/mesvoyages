@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svq+xml,<svq xmlns=%22http:www.w3.o"
-    </head>
-    <body>
-        {% block body %}
-        <h1>Mes voyages</h1>
-        {% endblock %}
-    </body>
-</html>
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Page d'accueil</h1>
+{% endblock %}
