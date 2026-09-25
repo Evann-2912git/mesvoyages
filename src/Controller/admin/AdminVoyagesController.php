@@ -49,7 +49,7 @@ class AdminVoyagesController extends AbstractController{
         $visite=$this->repository->find($id);
         $formVisite=$this->createForm(VisiteType::class,$visite);
         
-        $formVisite->HandleRequest($request);
+        $formVisite->handleRequest($request);
         if($formVisite->isSubmitted()&& $formVisite->isValid()){
             $this->repository->add($visite);
             return $this->redirectToRoute('admin.voyages');
@@ -66,7 +66,7 @@ class AdminVoyagesController extends AbstractController{
         $visite=new Visite();
         $formVisite=$this->createForm(VisiteType::class,$visite);
         
-        $formVisite->HandleRequest($request);
+        $formVisite->handleRequest($request);
         if($formVisite->isSubmitted()&& $formVisite->isValid()){
             $this->repository->add($visite);
             return $this->redirectToRoute('admin.voyages');
